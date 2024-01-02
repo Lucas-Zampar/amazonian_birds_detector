@@ -1,0 +1,2 @@
+accuracy,precision,recall,fscore,support,AP,AP50,AP75,TP,FP,FN
+0.0,0.0,0.0,0.0,172,0.0,0.0,0.0,0,0,172

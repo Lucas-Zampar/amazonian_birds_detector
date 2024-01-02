@@ -1,0 +1,6 @@
+,precision,recall,f1-score,TP,FP,FN
+canario_do_amazonas,0.0,0.0,0.0,0,0,58
+chupim,0.0,0.0,0.0,0,0,39
+rolinha,0.0,0.0,0.0,0,0,27
+sanhaco_da_amazonia,0.0,0.0,0.0,0,0,23
+sanhaco_do_coqueiro,0.0,0.0,0.0,0,0,25
