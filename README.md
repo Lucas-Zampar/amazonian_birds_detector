@@ -41,7 +41,7 @@ The study had access to the feeder of a residence in the state of Amapá, which 
 
 Three Logitech C270 HD webcams were installed at the feeder, connected to a notebook in order to record the birds feeding as shown in the figure below. The recordings were captured using a [script with the help of the OpenCV library](https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/blob/main/dataset/dataset_utils/script_opencv.py).
 
-<img src="https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/assets/75434421/18be9847-6e3c-4db4-b9b3-8eaba0007d73" alt="esquema_gravacao" height=60% width=60%>
+<img src="https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/assets/75434421/027f2f59-b4f8-4ca3-bad7-ee706f2f1519" alt="esquema_gravacao" height=60% width=60%>
 
 The images in the dataset were obtained from frames extracted from these recordings. In order to facilitate extraction, a [Streamlit application](https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/tree/main/streamlit_app) was developed, demonstrated in the video below. Through it, it is possible to select random or specific frames from the recordings, in addition to filtering them by date and predominant species.
 
@@ -51,7 +51,7 @@ Bird species were determined through consultations carried out on the citizen sc
 
 The acquired images were annotated using the [RoboFlow](https://roboflow.com/) platform. In total, 940 images and 1,836 annotations were collected in Pascal VOC format. The distribution of annotations by species can be seen in the graph below. The produced dataset can be found in the [dataset folder](https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/tree/main/dataset).
 
-![schema](https://github.com/Lucas-Zampar/amazonian_birds_detector/assets/75434421/027f2f59-b4f8-4ca3-bad7-ee706f2f1519)
+<img src="https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/assets/75434421/278633e3-965a-4707-a144-de9da2c4d431" alt="esquema_gravacao" height=60% width=60%>
 
 ## Training 
 
