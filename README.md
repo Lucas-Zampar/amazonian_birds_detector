@@ -23,7 +23,7 @@ https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/assets/75434421/
 
 
 
-# Goals
+# Objectives
 
 The general objective of this project was to develop a Deep Learning based approach to automatically detect Amazonian bird species from a residential context. To this end, the following specific objectives were defined:
 
@@ -35,11 +35,11 @@ The general objective of this project was to develop a Deep Learning based appro
 
 ## Dataset
 
-The study had access to the feeder of a residence in the state of Amapá, which can be seen in the figure below.
+The study had access to the feeder of a residence in the state of Amapá, Brazil, which can be seen in the figure below.
 
 <img src="https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/assets/75434421/a0c60cdd-c422-49c0-9599-b37959cf570e" alt="comedouro" height=60% width=60%>
 
-Three Logitech C270 HD webcams were installed at the feeder, connected to a notebook in order to record the birds feeding as shown in the figure below. The recordings were captured using a [script with the help of the OpenCV library](https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/blob/main/dataset/dataset_utils/script_opencv.py).
+Three Logitech C270 HD webcams were installed at the feeder, connected to a laptop in order to record the birds feeding as shown in the figure below. The recordings were captured using a [script with the help of the OpenCV library](https://github.com/Lucas-Zampar/detector_de_passaros_amazonicos/blob/main/dataset/dataset_utils/script_opencv.py).
 
 <img src="https://github.com/Lucas-Zampar/amazonian_birds_detector/assets/75434421/027f2f59-b4f8-4ca3-bad7-ee706f2f1519" alt="esquema_gravacao" height=60% width=60%>
 
@@ -59,14 +59,11 @@ Among the Deep Learning algorithms to detect objects, it is possible to find [Fa
 
 In this work, there were two consecutive training phases called respectively:
 
-
-In the preliminary phase, 30\% of the data was preserved in a set called partial, corresponding to 282 images and 560 annotations. This decision was made to define a baseline with less training data. The need to define a baseline arises due to the lack of previous studies. Therefore, it is necessary to define a model that serves as a basis for analysis to be compared and improved later, which will be done in the next phase.
-
 - __preliminary phase__: In the preliminary phase, 30% of the data was preserved in a set called partial, corresponding to 282 images and 560 annotations. This decision was made to define a baseline with less training data. The need to define a baseline arises due to the lack of previous studies. Therefore, it is necessary to define a model that serves as a basis for analysis to be compared and improved later, which will be done in the next phase.
 
 - __final phaes__: In the final phase, a single definitive model was trained using the same training configuration as the baseline. However, all data corresponding to 940 images and 1,836 annotations was used at this phase. 70% of the data was intended for training, while the remaining 30% for validation. After training, the performance of the definitive model was compared with that of the baseline. 
 
-The training was conducted using the _framework_ [IceVision](https://github.com/airctic/icevision) which uses the models made available by [MMDetection](https://github.com/open-mmlab/mmdetection). The configuration selected to train both the baseline and the definitive model can be seen in the table below.
+The training was conducted using the framework [IceVision](https://github.com/airctic/icevision) which uses the models made available by [MMDetection](https://github.com/open-mmlab/mmdetection). The configuration selected to train both the baseline and the definitive model can be seen in the table below.
 
 |  Hyperparameters                          | Values                   |
 |-------------------------------------------|--------------------------|
@@ -79,7 +76,7 @@ The training was conducted using the _framework_ [IceVision](https://github.com/
 | Image size during presizing               | 1024x1024                |
 
 
-The evaluation was conducted by the framework [FiftyOne](https://github.com/voxel51/fiftyone) using mean Average Precision (mAP) metric defined by the evaluation criteria of the [COCO](https://cocodataset. org/#detection-eval). Considering the IoU threshold at 50%, the baseline and the definitive model achieved the following results:
+The evaluation was conducted by the framework [FiftyOne](https://github.com/voxel51/fiftyone) using mean Average Precision (mAP) metric defined by the evaluation criteria of the [COCO](https://cocodataset.org/#detection-eval) dataset. Considering the IoU threshold at 50%, the baseline and the definitive model achieved the following results:
 
 
 |       Model       |    mAP  | 
@@ -95,12 +92,12 @@ In addition to mAP, precision and recall metrics were used to verify the perform
 
 | Species             	| Baseline precision 	| Definitive model precision  	| Baseline recall   	| Definitive model recall   	|
 |----------------------	|-------------------	|-----------------------------	|---------------------	|------------------------------	|
-| canário-do-amazonas  	|  0,9344           	| 0,9515                      	| 0,9828              	| 0,9849                       	|
-| chupim               	|  0,9000           	| 0,9725                      	| 0,9231              	| 1,0000                       	|
-| rolinha              	|  0,9643           	| 0,9663                      	| 1,0000              	| 0,9773                       	|
-| sanhaço-da-amazônia  	|  0,8519           	| 0,9877                      	| 1,0000              	| 1,0000                       	|
-| sanhaço-do-coqueiro  	|  0,8462           	| 0,9200                      	| 0,8800              	| 0,9787                       	|
-| __Mean__                	|  __0,8993__           	| __0,9596__                      	| __0,9572__              	| __0,9882__                       	|
+| canário-do-amazonas  	|  0.9344           	| 0.9515                      	| 0.9828              	| 0.9849                       	|
+| chupim               	|  0.9000           	| 0.9725                      	| 0.9231              	| 1.0000                       	|
+| rolinha              	|  0.9643           	| 0.9663                      	| 1.0000              	| 0.9773                       	|
+| sanhaço-da-amazônia  	|  0.8519           	| 0.9877                      	| 1.0000              	| 1.0000                       	|
+| sanhaço-do-coqueiro  	|  0.8462           	| 0.9200                      	| 0.8800              	| 0.9787                       	|
+| __Mean__                	|  __0.8993__           	| __0.9596__                      	| __0.9572__              	| __0.9882__                       	|
 
 
 In general, the definitive model presented an mean percentage gain in precision of 6.7% compared to the baseline, going from 89.93% to 95.96%. The mean recall had a smaller percentage growth of 3.24%, going from 95.72% to 98.82%.
@@ -127,7 +124,7 @@ The project root contains the following folders:
 
 - __project_codes__: folder where all notebooks and other project implementations are located.
 - __dataset__: folder where the datasets are located.
-- __faster_rcnn__: folder where the models' checkpoints are located. Unfortunately, due to storage limitations, the full content is only available [in the full repository shared by Google Drive](in the full repository shared by Google Drive).
+- __faster_rcnn__: folder where the models' checkpoints are located. Unfortunately, due to storage limitations, the full content is only available [in the full repository shared by Google Drive](https://drive.google.com/drive/folders/12ueqV4UuxU2ebdD4YYV4xpQZ3hxHhIk-?usp=sharing).
 - __streamlit_app__: folder where the implementation of the frame extraction application developed in Streamlit is located.
 
 
