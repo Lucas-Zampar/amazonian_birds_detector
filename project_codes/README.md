@@ -8,8 +8,8 @@ You will find in this folder:
 - __detect_vidoe.ipynb__: notebook used to annotate a video.
 - __make_report_csv_files.ipynb__: notebook used to generate tables with the results of each model.
 - __train_model.ipynb__: notebook used to train and evaluate the models.
-- __demo.jpg__: demonstrative image for annotation.
-- __demo.mp4__: demonstrative video for annotation.
+- __img_demo_X.png__: demonstrative image for annotation.
+- __video_demo.mp4__: demonstrative video for annotation.
 
 __WARNING__: notebooks need the _checkpoints_ of the models in the `../faster_rccnn/` folder. Please download from [the full repository shared by Google Drive.](https://drive.google.com/drive/folders/12ueqV4UuxU2ebdD4YYV4xpQZ3hxHhIk-?usp=drive_link) &#9888;
 
