@@ -3,6 +3,10 @@
 
 # Amazonian Birds Detector
 
+Contact: 
+lucas.fzampar@gmail.com 
+clay.palmeira@gmail.com
+
 Birds attract human attention due to their beauty and diversity, which encourages people to observe them for leisure. In this process, it is possible to record birds in images and share them on citizen science platforms such as [WikiAves](https://www.wikiaves.com.br/) and [eBird](https://ebird.org/home ). With this, people can contribute significantly to scientific research that aims to understand and preserve bird species.
 
 The Amazon region can offer an excellent bird watching experience given the diversity of existing species. Some of them have even adapted to urban environments, making it possible to find birds feeding even in residential gardens. This way, local residents can observe birds by attracting them through food placed in open feeders.
