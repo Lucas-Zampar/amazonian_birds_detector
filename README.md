@@ -3,9 +3,15 @@
 
 # Amazonian Birds Detector
 
-Contact: 
+## Contact: 
+
+If you would like to contact us, do not hesitate to send us an email at the following addresses:
+
 lucas.fzampar@gmail.com 
+
 clay.palmeira@gmail.com
+
+---
 
 Birds attract human attention due to their beauty and diversity, which encourages people to observe them for leisure. In this process, it is possible to record birds in images and share them on citizen science platforms such as [WikiAves](https://www.wikiaves.com.br/) and [eBird](https://ebird.org/home ). With this, people can contribute significantly to scientific research that aims to understand and preserve bird species.
 
